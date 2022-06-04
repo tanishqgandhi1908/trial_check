@@ -1,6 +1,5 @@
 import React from 'react'
 import {Link, BrowserRouter, Route, withRouter  } from 'react-router-dom';
-import NGO from '../NGO/ngo';
 import './Card.css'
 
 
