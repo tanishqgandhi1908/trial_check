@@ -6,7 +6,6 @@ import './Card.css'
 
 function Card(props) {
   return (
-    < BrowserRouter >
     <div className='card'>
         <img src={props.img} className='card--img' />
         <div className='card--body'>
@@ -24,7 +23,6 @@ function Card(props) {
             </div>
         </div>
     </div>
-    </BrowserRouter>
   )
 }
 
