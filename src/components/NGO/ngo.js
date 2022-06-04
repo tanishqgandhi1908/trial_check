@@ -1,4 +1,4 @@
-import { React } from 'react'
+import { React, useEffect, useState } from 'react'
 import Chart from "react-google-charts"
 import Table from 'react-bootstrap/Table'
 import "./NGO.css"
@@ -6,80 +6,97 @@ import Navbar from '../navbar/Navbar.js'
 
 import axios from "axios"
 
-export const data_amount = [
-  ["Month", "Recieved (kgs)", "Consumed (kgs)"],
-  ["March", 30, 28],
-  ["April", 50, 45],
-  ["May", 24, 20],
-];
 
-export const options_amount = {
-  chart: {
-    title: "Monthly food recieved",
-  },
-  
-};
 
-export const data_age = [
-  ["Month", "under 18", "18-60", "over 60"],
-  ["March", 12, 14, 22],
-  ["April", 10, 12, 20],
-  ["May", 15, 20, 12],
-];
 
-export const options_age = {
-  title: "Age wise disrtribution",
-  chartArea: { width: "50%" },
-  isStacked: true,
-  hAxis: {
-    title: "Total Beneficiaries",
-    minValue: 0,
-  },
-  vAxis: {
-    title: "Month",
-  },
-};
-export const data_benef = [
-  ["Month", "Reached"],
-  ["March", 48],
-  ["June", 50],
-  ["July", 47],
-];
-export const options_benef = {
-  title: "Beneficiaries reached",
-  curveType: "function",
-  legend: { position: "bottom" },
-};
 
-export const data_gender = [
-  ["Gender", "Women", "Men"],
-  ["March", 8, 40],
-  ["April", 12, 26],
-  ["May", 12, 26],
-];
 
-export const options_gender = {
-  chartArea: { width: "50%" },
-  isStacked: true,
-  hAxis: {
-    title: "Gender",
-    minValue: 0,
-  },
-  vAxis: {
-    title: "Months",
-  },
-};
+
+
+
+
+
+
+
 function NGO() {
-  axios.get("http://localhost:4001/dashboard").then(
-    data => console.log(data.data)
-  ).catch(err=>console.log(err));
+  const [ngodata, setngodata] = useState([]);
+  useEffect(() => {
+    axios.get("http://localhost:4001/dashboard").then((response) => {
+      setngodata(response.data)
+    });
+  }, [])
+  var data_gender = [
+    ["Gender", "Women", "Men"],
+  ];
+  var data_benef = [
+    ["Month", "Reached"],
+  ];
+  var data_age = [
+    ["Month", "under 18", "18-60", "over 60"],
+    ["March", 12, 14, 22],
+    ["April", 10, 12, 20],
+    ["May", 15, 20, 12],
+  ];
+
+  var data_amount = [
+    ["Month", "Recieved (kgs)"],
+  ];
+  for (let i = 0; i < ngodata.length; i++) {
+    if (ngodata[i].name === "NGO1" && ngodata[i].enrolledProgramme==="pg1") {
+      data_gender.push([ngodata[i].month, ngodata[i].female, ngodata[i].totalBeneficiaries - ngodata[i].female]);
+      data_benef.push([ngodata[i].month,ngodata[i].totalBeneficiaries]);
+      data_amount.push([ngodata[i].month,ngodata[i].amtOfFood]);
+      
+    }
+  }
+
+  const options_age = {
+    title: "Age wise disrtribution",
+    chartArea: { width: "50%" },
+    isStacked: true,
+    hAxis: {
+      title: "Total Beneficiaries",
+      minValue: 0,
+    },
+    vAxis: {
+      title: "Month",
+    },
+  };
+  
+  const options_benef = {
+    title: "Beneficiaries reached",
+    curveType: "function",
+    legend: { position: "bottom" },
+  };
+
+  
+
+  const options_amount = {
+    chart: {
+      title: "Monthly food recieved",
+    },
+  
+  };
+
+  const options_gender = {
+    chartArea: { width: "50%" },
+    isStacked: true,
+    hAxis: {
+      title: "Gender",
+      minValue: 0,
+    },
+    vAxis: {
+      title: "Months",
+    },
+  };
+
   return (
     <div className='ngo_details_page'>
-    <nav className="navibar">
-    <div className="navibar-container">
-            <div className='dashboard-title'> Dashboard NGO1 </div>
-    </div>
-</nav>
+      <nav className="navibar">
+        <div className="navibar-container">
+          <div className='dashboard-title'> Dashboard NGO1 </div>
+        </div>
+      </nav>
       <div className='tabluar_data'>
         <Table striped bordered hover>
           <thead>
