@@ -2,6 +2,10 @@ import { React } from 'react'
 import Chart from "react-google-charts"
 import Table from 'react-bootstrap/Table'
 import "./NGO.css"
+import Navbar from '../navbar/Navbar.js'
+
+
+
 export const data_amount = [
   ["Month", "Recieved (kgs)", "Consumed (kgs)"],
   ["March", 30, 28],
@@ -68,6 +72,7 @@ function NGO() {
 
   return (
     <div className='ngo_details_page'>
+      <Navbar></Navbar>
       <div className='tabluar_data'>
         <Table striped bordered hover>
           <thead>
@@ -81,7 +86,7 @@ function NGO() {
           </thead>
           <tbody>
             <tr>
-              <td>NGO Feeding Program
+              <td><div className='program_name'> NGO Feeding Program</div>
               </td>
               <td> <Chart
                 chartType="Bar"
@@ -120,7 +125,7 @@ function NGO() {
               <td></td>
             </tr>
             <tr>
-              <td>Food Rescue Program
+              <td><div className='program_name'>Food Rescue Program</div>
 
               </td>
               <td> <Chart
@@ -160,7 +165,7 @@ function NGO() {
               <td></td>
             </tr>
             <tr>
-              <td>Food Relief Program
+              <td><div className='program_name'>Food Relief Program</div>
 
 
               </td>
@@ -201,7 +206,7 @@ function NGO() {
               <td></td>
             </tr>
             <tr>
-              <td>Breakfast Feeding Program
+              <td><div className='program_name'>Breakfast Feeding Program</div>
 
 
               </td>
