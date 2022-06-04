@@ -42,7 +42,7 @@ function NGO() {
     ["Month", "Recieved (kgs)"],
   ];
   for (let i = 0; i < ngodata.length; i++) {
-    if (ngodata[i].name === "NGO1" && ngodata[i].enrolledProgramme==="pg1") {
+    if (ngodata[i].name === "NGO1" && ngodata[i].enrolledProgramme==="NGO Feeding Program") {
       data_gender.push([ngodata[i].month, ngodata[i].female, ngodata[i].totalBeneficiaries - ngodata[i].female]);
       data_benef.push([ngodata[i].month,ngodata[i].totalBeneficiaries]);
       data_amount.push([ngodata[i].month,ngodata[i].amtOfFood]);
