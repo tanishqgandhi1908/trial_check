@@ -73,7 +73,11 @@ function NGO() {
 
   return (
     <div className='ngo_details_page'>
-      <Navbar></Navbar>
+    <nav className="navibar">
+    <div className="navibar-container">
+            <div className='dashboard-title'> Dashboard NGO1 </div>
+    </div>
+</nav>
       <div className='tabluar_data'>
         <Table striped bordered hover>
           <thead>
