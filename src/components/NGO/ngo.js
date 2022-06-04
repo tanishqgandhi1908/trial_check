@@ -4,7 +4,7 @@ import Table from 'react-bootstrap/Table'
 import "./NGO.css"
 import Navbar from '../navbar/Navbar.js'
 
-
+import axios from "axios"
 
 export const data_amount = [
   ["Month", "Recieved (kgs)", "Consumed (kgs)"],
@@ -70,7 +70,9 @@ export const options_gender = {
   },
 };
 function NGO() {
-
+  axios.get("http://localhost:4001/dashboard").then(
+    data => console.log(data.data)
+  ).catch(err=>console.log(err));
   return (
     <div className='ngo_details_page'>
     <nav className="navibar">
