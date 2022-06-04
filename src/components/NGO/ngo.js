@@ -17,9 +17,9 @@ export const options_amount = {
 
 export const data_age = [
   ["Month", "under 18", "18-60", "over 60"],
-  ["March",12,14,22],
-  ["April",10,12,20],
-  ["May",15,20,12],
+  ["March", 12, 14, 22],
+  ["April", 10, 12, 20],
+  ["May", 15, 20, 12],
 ];
 
 export const options_age = {
@@ -44,6 +44,25 @@ export const options_benef = {
   title: "Beneficiaries reached",
   curveType: "function",
   legend: { position: "bottom" },
+};
+
+export const data_gender = [
+  ["Gender", "Women", "Men"],
+  ["March", 8, 40],
+  ["April", 12, 26],
+  ["May", 12, 26],
+];
+
+export const options_gender = {
+  chartArea: { width: "50%" },
+  isStacked: true,
+  hAxis: {
+    title: "Gender",
+    minValue: 0,
+  },
+  vAxis: {
+    title: "Months",
+  },
 };
 function NGO() {
 
@@ -72,26 +91,26 @@ function NGO() {
                 options={options_amount}
               /></td>
               <td> <Chart
-              chartType="BarChart"
-              width="100%"
-              height="200px"
-              data={data_age}
-              options={options_age}
-            /></td>
-              <td><Chart
-                chartType="Bar"
+                chartType="BarChart"
                 width="100%"
                 height="200px"
-                data={data_amount}
-                options={options_amount}
+                data={data_age}
+                options={options_age}
               /></td>
               <td><Chart
-              chartType="LineChart"
-              width="100%"
-              height="200px"
-              data={data_benef}
-              options={options_benef}
-            /></td>
+                chartType="BarChart"
+                width="100%"
+                height="200px"
+                data={data_gender}
+                options={options_gender}
+              /></td>
+              <td><Chart
+                chartType="LineChart"
+                width="100%"
+                height="200px"
+                data={data_benef}
+                options={options_benef}
+              /></td>
             </tr>
             <tr>
               <td></td>
@@ -101,10 +120,10 @@ function NGO() {
               <td></td>
             </tr>
             <tr>
-            <td>Food Rescue Program
+              <td>Food Rescue Program
 
-            </td>
-            <td> <Chart
+              </td>
+              <td> <Chart
                 chartType="Bar"
                 width="100%"
                 height="200px"
@@ -112,26 +131,26 @@ function NGO() {
                 options={options_amount}
               /></td>
               <td> <Chart
-              chartType="BarChart"
-              width="100%"
-              height="200px"
-              data={data_age}
-              options={options_age}
-            /></td>
-              <td><Chart
-                chartType="Bar"
+                chartType="BarChart"
                 width="100%"
                 height="200px"
-                data={data_amount}
-                options={options_amount}
+                data={data_age}
+                options={options_age}
               /></td>
               <td><Chart
-              chartType="LineChart"
-              width="100%"
-              height="200px"
-              data={data_benef}
-              options={options_benef}
-            /></td>
+                chartType="BarChart"
+                width="100%"
+                height="200px"
+                data={data_gender}
+                options={options_gender}
+              /></td>
+              <td><Chart
+                chartType="LineChart"
+                width="100%"
+                height="200px"
+                data={data_benef}
+                options={options_benef}
+              /></td>
             </tr>
             <tr>
               <td></td>
@@ -141,11 +160,11 @@ function NGO() {
               <td></td>
             </tr>
             <tr>
-            <td>Food Relief Program
+              <td>Food Relief Program
 
 
-            </td>
-            <td> <Chart
+              </td>
+              <td> <Chart
                 chartType="Bar"
                 width="100%"
                 height="200px"
@@ -153,26 +172,26 @@ function NGO() {
                 options={options_amount}
               /></td>
               <td> <Chart
-              chartType="BarChart"
-              width="100%"
-              height="200px"
-              data={data_age}
-              options={options_age}
-            /></td>
-              <td><Chart
-                chartType="Bar"
+                chartType="BarChart"
                 width="100%"
                 height="200px"
-                data={data_amount}
-                options={options_amount}
+                data={data_age}
+                options={options_age}
               /></td>
               <td><Chart
-              chartType="LineChart"
-              width="100%"
-              height="200px"
-              data={data_benef}
-              options={options_benef}
-            /></td>
+                chartType="BarChart"
+                width="100%"
+                height="200px"
+                data={data_gender}
+                options={options_gender}
+              /></td>
+              <td><Chart
+                chartType="LineChart"
+                width="100%"
+                height="200px"
+                data={data_benef}
+                options={options_benef}
+              /></td>
             </tr>
             <tr>
               <td></td>
@@ -182,11 +201,11 @@ function NGO() {
               <td></td>
             </tr>
             <tr>
-            <td>Breakfast Feeding Program
+              <td>Breakfast Feeding Program
 
 
-            </td>
-            <td> <Chart
+              </td>
+              <td> <Chart
                 chartType="Bar"
                 width="100%"
                 height="200px"
@@ -194,28 +213,28 @@ function NGO() {
                 options={options_amount}
               /></td>
               <td> <Chart
-              chartType="BarChart"
-              width="100%"
-              height="200px"
-              data={data_age}
-              options={options_age}
-            /></td>
-              <td><Chart
-                chartType="Bar"
+                chartType="BarChart"
                 width="100%"
                 height="200px"
-                data={data_amount}
-                options={options_amount}
+                data={data_age}
+                options={options_age}
               /></td>
               <td><Chart
-              chartType="LineChart"
-              width="100%"
-              height="200px"
-              data={data_benef}
-              options={options_benef}
-            /></td>
+                chartType="BarChart"
+                width="100%"
+                height="200px"
+                data={data_gender}
+                options={options_gender}
+              /></td>
+              <td><Chart
+                chartType="LineChart"
+                width="100%"
+                height="200px"
+                data={data_benef}
+                options={options_benef}
+              /></td>
             </tr>
-            
+
           </tbody>
         </Table>
 

@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import NGO from './components/ngo.js';
+import NGO from './components/NGO/ngo.js';
 function App() {
   return (
     <div className="App">
