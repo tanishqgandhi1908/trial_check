@@ -17,6 +17,7 @@ export const options_amount = {
   chart: {
     title: "Monthly food recieved",
   },
+  
 };
 
 export const data_age = [
