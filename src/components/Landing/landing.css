@@ -1,0 +1,24 @@
+.row2{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    /* justify-content: space-between; */
+}
+
+.topPerformer{
+    padding: 10px;
+    box-shadow: 0 0 10px 5px #d2d2d4 ;
+      border-radius: 10px;
+      text-align: center;
+      display: flex;
+      
+}
+
+.uploadFile{
+    padding: 10px;
+    box-shadow: 0 0 10px 5px #d2d2d4 ;
+    border-radius: 10px;
+   align-items: center;
+    display: flex;
+}

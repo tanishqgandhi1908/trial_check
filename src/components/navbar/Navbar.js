@@ -8,7 +8,7 @@ function Navbar() {
     <>
         <nav className="navibar">
             <div className="navibar-container">
-                    <img src={logo} height={60} alt='logo' />
+                    <img src={logo} height={70} alt='logo' />
             </div>
         </nav>
     </>

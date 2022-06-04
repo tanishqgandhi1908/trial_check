@@ -11,15 +11,35 @@ import NGO7_image from '../images/NGO7.png'
 import NGO8_image from '../images/NGO8.png'
 import NGO9_image from '../images/NGO9.png'
 import NGO10_image from '../images/NGO10.jpg'
+import '../Landing/landing.css';
+import Upload from '../Upload';
+
 function Landing() {
     return (
         <>
             <Navbar />
+            <div className='row2'>
+            <div className="uploadFile" >
+                <Upload  />
+            </div>
+
+            <div className='topPerformer'>
+                <div className='topPerformerTitle'>
+                    <h3>TOP PERFORMER OF THIS MONTH!</h3>
+                    <br />
+                    <h3>NGO NO.</h3>
+                </div>
+            </div>
+            </div>
+
+
 
             <div className='wrapper'>
                 <Card
                     img={NGO1_image}
                     title='NGO1'
+                    dashboard = 'ngo'
+                    editForm = 'edit'
 
                 />
 

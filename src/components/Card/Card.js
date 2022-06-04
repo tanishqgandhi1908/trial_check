@@ -14,11 +14,11 @@ function Card(props) {
             <hr />
             <br />
             <div>
-            <Link to='/ngo' className='card--btn'>Check Statistics!</Link>
+            <Link to={`/${props.dashboard}`} className='card--btn'>Check Statistics!</Link>
             </div>
             <br />
             <div>
-            <Link to='/edit'  className='card--btn'>Edit</Link>
+            <Link to={`/${props.editForm}`}  className='card--btn'>Edit</Link>
             </div>
         </div>
     </div>
