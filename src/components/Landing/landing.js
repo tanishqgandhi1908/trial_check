@@ -38,14 +38,14 @@ function Landing() {
                 <Card
                     img={NGO1_image}
                     title='NGO1'
-                    dashboard = 'ngo'
-                    editForm = 'edit'
+                    
 
                 />
 
                 <Card
                     img={NGO2_image}
                     title='NGO2'
+                    
                 />
 
                 <Card
