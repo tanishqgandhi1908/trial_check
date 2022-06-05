@@ -34,9 +34,9 @@ class Upload extends React.Component {
 	render() {
 		return (
 			<div id="container" >
-				<h3>Upload a File</h3>
+				<h4>Upload a File</h4>
                 <br />
-				<h4>{this.state.msg}</h4>
+				<h5>{this.state.msg}</h5>
 				<input onChange={this.onFileChange} type="file"></input>
 				<button disabled={!this.state.file} onClick={this.uploadFileData}>Upload</button>
 			</div>

@@ -216,7 +216,7 @@ function NGO() {
               <th>Amount Recieved (Kgs)	</th>
               <th>Age Distribution</th>
               <th>Gender Distribution</th>
-              <th>beneficiaries reached</th>
+              <th>Beneficiaries reached</th>
             </tr>
           </thead>
           <tbody>

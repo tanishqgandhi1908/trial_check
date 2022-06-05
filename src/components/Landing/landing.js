@@ -34,6 +34,13 @@ var topPerformer;
       }
   }
 
+  var totalB=0;
+  var totalF=0;
+  for (let i = 0; i < ngodata.length; i++) {
+      totalB = totalB + ngodata[i].totalBeneficiaries; 
+      totalF = totalF + ngodata[i].amtOfFood;
+    }
+
 
     return (
         <>
@@ -45,9 +52,25 @@ var topPerformer;
 
             <div className='topPerformer'>
                 <div className='topPerformerTitle'>
-                    <h3>TOP PERFORMER OF THIS MONTH!</h3>
+                    <h4>TOP PERFORMER OF THIS MONTH!</h4>
                     <br />
-                    <h3>{topPerformer}</h3>
+                    <h4>{topPerformer}</h4>
+                </div>
+            </div>
+
+            <div className='totalBen'>
+                <div className='totalBenTitle'>
+                    <h4>TOTAL BENEFICIARIES IMPACTED</h4>
+                    <br />
+                    <h4>{totalB}</h4>
+                </div>
+            </div>
+
+            <div className='totalFood'>
+                <div className='totalFoodTitle'>
+                    <h4>TOTAL FOOD RECEIVED</h4>
+                    <br />
+                    <h4>{totalF}</h4>
                 </div>
             </div>
             </div>
