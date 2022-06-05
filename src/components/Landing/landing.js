@@ -1,4 +1,5 @@
-import React from 'react';
+import {React, useEffect, useState} from 'react';
+import axios from 'axios';
 import Navbar from '../navbar/Navbar';
 import Card from '../Card/Card';
 import NGO1_image from '../images/NGO1.jpg'
@@ -15,6 +16,25 @@ import '../Landing/landing.css';
 import Upload from '../Upload';
 
 function Landing() {
+    const [ngodata, setngodata] = useState([]);
+  useEffect(() => {
+    axios.get("http://localhost:2001/dashboard").then((response) => {
+      setngodata(response.data)
+    });
+  }, [])
+  const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  const d = new Date();
+let monthname = month[d.getMonth()-1];
+var topPerformer;
+  var max = 0;
+  for (let i = 0; i < ngodata.length; i++) {
+      if(ngodata[i].month===monthname && ngodata[i].totalBeneficiaries > max){
+        max = ngodata[i].totalBeneficiaries;
+        topPerformer = ngodata[i].name;
+      }
+  }
+
+
     return (
         <>
             <Navbar />
@@ -27,7 +47,7 @@ function Landing() {
                 <div className='topPerformerTitle'>
                     <h3>TOP PERFORMER OF THIS MONTH!</h3>
                     <br />
-                    <h3>NGO NO.</h3>
+                    <h3>{topPerformer}</h3>
                 </div>
             </div>
             </div>
