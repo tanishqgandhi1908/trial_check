@@ -118,7 +118,7 @@ function NGO() {
       data_gender_pg1.push([ngodata[i].month, ngodata[i].female, ngodata[i].totalBeneficiaries - ngodata[i].female]);
       data_benef_pg1.push([ngodata[i].month,ngodata[i].totalBeneficiaries]);
       data_amount_pg1.push([ngodata[i].month,ngodata[i].amtOfFood]);
-      data_age_pg1.push([ngodata[i].month,ngodata[i].under18,ngodata[i].over60-ngodata[i].under18,ngodata[i].over60]);
+      data_age_pg1.push([ngodata[i].month,ngodata[i].under18,Math.abs(ngodata[i].over60-ngodata[i].under18),ngodata[i].over60]);
       
     }
   }
@@ -131,7 +131,7 @@ function NGO() {
       data_gender_pg2.push([ngodata[i].month, ngodata[i].female, ngodata[i].totalBeneficiaries - ngodata[i].female]);
       data_benef_pg2.push([ngodata[i].month,ngodata[i].totalBeneficiaries]);
       data_amount_pg2.push([ngodata[i].month,ngodata[i].amtOfFood]);
-      data_age_pg2.push([ngodata[i].month,ngodata[i].under18,ngodata[i].over60-ngodata[i].under18,ngodata[i].over60]);
+      data_age_pg2.push([ngodata[i].month,ngodata[i].under18,Math.abs(ngodata[i].over60-ngodata[i].under18),ngodata[i].over60]);
       
     }
   }
@@ -143,7 +143,7 @@ function NGO() {
       data_gender_pg3.push([ngodata[i].month, ngodata[i].female, ngodata[i].totalBeneficiaries - ngodata[i].female]);
       data_benef_pg3.push([ngodata[i].month,ngodata[i].totalBeneficiaries]);
       data_amount_pg3.push([ngodata[i].month,ngodata[i].amtOfFood]);
-      data_age_pg3.push([ngodata[i].month,ngodata[i].under18,ngodata[i].over60-ngodata[i].under18,ngodata[i].over60]);
+      data_age_pg3.push([ngodata[i].month,ngodata[i].under18,Math.abs(ngodata[i].over60-ngodata[i].under18),ngodata[i].over60]);
       
     }
   }
@@ -155,7 +155,7 @@ function NGO() {
       data_gender_pg4.push([ngodata[i].month, ngodata[i].female, ngodata[i].totalBeneficiaries - ngodata[i].female]);
       data_benef_pg4.push([ngodata[i].month,ngodata[i].totalBeneficiaries]);
       data_amount_pg4.push([ngodata[i].month,ngodata[i].amtOfFood]);
-      data_age_pg4.push([ngodata[i].month,ngodata[i].under18,ngodata[i].over60-ngodata[i].under18,ngodata[i].over60]);
+      data_age_pg4.push([ngodata[i].month,ngodata[i].under18,Math.abs(ngodata[i].over60-ngodata[i].under18),ngodata[i].over60]);
       
     }
   }
