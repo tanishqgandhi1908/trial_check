@@ -63,17 +63,17 @@ function Login() {
   const renderForm = (
     <div className="form">
       <form onSubmit={handleSubmit}>
-        <div className="input-container">
+        <div className="input-container1">
           <label>Username </label>
           <input type="text" name="uname" required />
           {renderErrorMessage("uname")}
         </div>
-        <div className="input-container">
+        <div className="input-container1">
           <label>Password </label>
           <input type="password" name="pass" required />
           {renderErrorMessage("pass")}
         </div>
-        <div className="button-container">
+        <div className="button-container1">
           <input type="submit" />
         </div>
       </form>
